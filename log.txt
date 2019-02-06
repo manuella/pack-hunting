@@ -1,0 +1,4 @@
+Angular 6 default output path is dist/[projectName] . This will not work with ngh out of the box, make sure that the build is /dist and not /dist/[projectname]
+
+$ ng build --prod --base-href=pack-hunting
+$ ngh --dir ./dist --no-silent

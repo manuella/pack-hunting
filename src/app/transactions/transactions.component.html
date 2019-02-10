@@ -1,7 +1,9 @@
 <p>
  Transactions:
  <li *ngFor="let transaction of transactions">
-       {{transaction}}
-        <br>
+       Transaction Id: {{transaction.transactionId}}, debitor: {{transaction.debitorId}},
+        creditor: {{transaction.creditorId}}, amount: {{transaction.amount}}
+      <br>
+
   </li>
 </p>

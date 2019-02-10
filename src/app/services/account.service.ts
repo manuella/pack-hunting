@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Transaction } from '../models/transaction';
+import { Account } from '../models/account';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
@@ -7,14 +7,15 @@ import { retry, catchError } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class TransactionService {
+
+export class AccountService {
 
   constructor(private httpService : HttpClient) { }
 
-  transactions: Transaction[];
+  accounts: Account[];
 
-  public getTransactions()
+  public getAccounts()
   {
-    return this.httpService.get<Transaction[]>("http://localhost:8081/transactions/");
+    return this.httpService.get<Account[]>("http://localhost:8080/accounts/");
   }
 }

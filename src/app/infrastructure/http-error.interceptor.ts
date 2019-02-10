@@ -19,7 +19,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
 
          if (error.error instanceof ErrorEvent) {
            // client-side error
-           errorMessage = 'Client error: ${error.name}\nCode: ${error.status}\nMessage: ${error.message}';
+           errorMessage = `Client error: ${error.name}\nCode: ${error.status}\nMessage: ${error.message}`;
            // server-side error
          } else {
            errorMessage = `Service error: ${error.name}\nCode: ${error.status}\nMessage: ${error.message}`;

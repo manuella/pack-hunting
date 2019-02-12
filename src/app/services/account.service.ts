@@ -43,13 +43,6 @@ export class AccountService {
     };
 
     console.log(model);
-    return this.httpService.post<Account>(this.AccountURL, model, httpOptions).pipe(
-      catchError(val => console.log(val))
-    );
+    return this.httpService.post<Account>(this.AccountURL, model, httpOptions);
   }
-
-  private
-
-
-
 }

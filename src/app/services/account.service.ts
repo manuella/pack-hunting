@@ -8,7 +8,6 @@ import { retry, catchError } from 'rxjs/operators';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json;charset=UTF-8',
-
     // authtoken goes here
   })
 }
@@ -42,7 +41,7 @@ export class AccountService {
     	"displayName": userName
     };
 
-    console.log(model);
+  //  console.log(model);
     return this.httpService.post<Account>(this.AccountURL, model, httpOptions);
   }
 }

@@ -4,14 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { RegisterAccountComponent } from './register-account/register-account.component';
-
-
+import { SellToBrokerComponent } from './sell-to-broker/sell-to-broker.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/transactions', pathMatch: 'full' },
   { path: 'transactions', component: TransactionsComponent },
   { path: 'accounts', component: AccountsComponent },
-  { path: 'register-account', component: RegisterAccountComponent }
+  { path: 'register-account', component: RegisterAccountComponent },
+  { path: 'sell-question', component: SellToBrokerComponent}
 ];
 
 @NgModule({

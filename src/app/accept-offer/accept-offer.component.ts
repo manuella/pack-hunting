@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BrokerService } from '../services/broker.service';
 
 @Component({
   selector: 'app-accept-offer',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AcceptOfferComponent implements OnInit {
 
-  constructor() { }
+  constructor(brokerService : BrokerService) { }
 
+  offerId: number;
   ngOnInit() {
   }
+
+
+    onSubmit()
+    {
+      this.brokerService.accept( this.offerId)
+    }
+
+
 
 }

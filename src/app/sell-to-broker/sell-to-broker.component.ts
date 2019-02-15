@@ -14,10 +14,11 @@ export class SellToBrokerComponent implements OnInit {
   question : string;
   accountId : number;
   submitted = "false";
+  offerId  : Observable<number>;
 
   onSubmit()
   {
-    this.brokerService.offer(this.question, this.accountId)
+    this.offerId = this.brokerService.offer(this.question, this.accountId);
     this.submitted = "true";
   }
 

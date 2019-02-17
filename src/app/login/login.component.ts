@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,9 +8,14 @@ import { FormControl } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  profileForm = new FormGroup({
+  loginForm = new FormGroup({
     accountId: new FormControl('')
   });
+
+  onSubmit() {
+  // TODO: Use EventEmitter with form value
+  console.warn(this.loginForm);
+}
 
   constructor() { }
 

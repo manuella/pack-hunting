@@ -1,3 +1,5 @@
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit">
-  <Label> AccountId: <input type="text" [formControl]="accountId"> </Label>
+<div> <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <Label> AccountId: <input type="text" formControlName="accountId"> </Label>
+  <button type="submit" [disabled]="!loginForm.valid">Submit</button>
 </form>
+<div>

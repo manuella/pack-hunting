@@ -1,3 +1,3 @@
-<p>
-  login works!
-</p>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit">
+  <Label> AccountId: <input type="text" [formControl]="accountId"> </Label>
+</form>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BrokerService } from '../services/broker.service';
+import { Observable, throwError } from 'rxjs';
 
 
 @Component({
@@ -18,7 +19,10 @@ export class SellToBrokerComponent implements OnInit {
 
   onSubmit()
   {
-    this.offerId = this.brokerService.offer(this.question, this.accountId);
+    this.brokerService.offer(this.question, this.accountId).
+      subscribe((response : object) => {
+          console.log(response);
+        });
     this.submitted = "true";
   }
 

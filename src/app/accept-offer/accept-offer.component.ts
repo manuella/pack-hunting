@@ -17,7 +17,7 @@ export class AcceptOfferComponent implements OnInit {
 
     onSubmit()
     {
-      this.brokerService.accept( this.offerId)
+  //    this.brokerService.accept( this.offerId)
     }
 
 

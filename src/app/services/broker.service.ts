@@ -32,9 +32,9 @@ export class BrokerService {
     return this.httpService.post<Offer>(this.brokerUrl, model, httpOptions);
   }
 
-  public accept(offerId : number) //: Observable<Offer>
-  {
+//  public accept(offerId : number) : Observable<Offer>
+//  {
 
 
-  }
+//  }
 }

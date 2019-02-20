@@ -1,9 +1,10 @@
-<p>
+<div>
  Transactions:
+ <h2> Transactions for account : {{loggedAccount}} </h2>
  <li *ngFor="let transaction of transactions">
        Transaction Id: {{transaction.transactionId}}, debitor: {{transaction.debitorId}},
         creditor: {{transaction.creditorId}}, amount: {{transaction.amount}}
       <br>
 
   </li>
-</p>
+</div>

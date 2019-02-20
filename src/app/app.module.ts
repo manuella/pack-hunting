@@ -16,7 +16,6 @@ import { SellToBrokerComponent } from './sell-to-broker/sell-to-broker.component
 import { AcceptOfferComponent } from './accept-offer/accept-offer.component';
 import { LoginComponent } from './login/login.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

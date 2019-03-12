@@ -29,12 +29,12 @@ export class AccountService {
 
   }
 
-  AccountURL =  "http://localhost:8080/accounts/";
+  AccountURL =  "http://www.mocky.io/v2/5c870f1932000022043bd039";
 
   accounts: Account[];
   public get()
   {
-    const request = this.httpService.get<Account[]>(this.AccountURL).pipe(
+    const request = this.httpService.get(this.AccountURL).pipe(
       tap(response => this.accountStore.set(response))
     );
 

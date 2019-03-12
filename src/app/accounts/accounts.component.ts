@@ -34,11 +34,18 @@ export class AccountsComponent implements OnInit
     console.log("accounts:" + this.accounts$);
 
     this.accounts$ = this.search.valueChanges.pipe(
-      startWith(''),
-      switchMap(value => this.accountsQuery.selectAll({
+      switchMap(value => this.accountsQuery.selectAll(
+       {
          filterBy: entity => entity.userName.toLowerCase().includes(value)
-      }))
+      }
+    ))
     );
+
+    this.accounts$.forEach(function (value2)
+     {
+        console.log("result: " + value2 )
+      });
+
 
     console.log(this.accounts$);
   }

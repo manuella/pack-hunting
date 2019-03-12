@@ -1,18 +1,13 @@
-export class Account
+
+import { ID } from '@datorama/akita';
+
+export type Account =
 {
+  id: ID;
+  userName : String;
   createTime: Date;
   createUser: string;
   accountId: number;
   updateTime: Date;
   updateUser: string;
-
-  constructor(public userName: string,
-    public displayName: string)
-  {
-
-  }
-
-
-
-
-}
+};

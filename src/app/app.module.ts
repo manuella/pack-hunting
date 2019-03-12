@@ -1,9 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule }     from './app-routing.module';
-
 import { AppComponent } from './app.component';
 
 import { TransactionsComponent } from './transactions/transactions.component';
@@ -12,6 +11,7 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { RegisterAccountComponent } from './register-account/register-account.component';
 import { SellToBrokerComponent } from './sell-to-broker/sell-to-broker.component';
 import { AcceptOfferComponent } from './accept-offer/accept-offer.component';
+import { AccountComponent } from './accounts/account.component';
 
 
 @NgModule({
@@ -22,13 +22,15 @@ import { AcceptOfferComponent } from './accept-offer/accept-offer.component';
     AccountsComponent,
     RegisterAccountComponent,
     SellToBrokerComponent,
-    AcceptOfferComponent
+    AcceptOfferComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers:
   [{

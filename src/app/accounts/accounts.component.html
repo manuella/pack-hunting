@@ -1,8 +1,13 @@
+Akita Accounts Demo<br>
+<ng-container *ngIf="!(loading$ | async); else loadingTpl">
+  <input placeholder="Search Accounts" [formControl]="search">
+  <app-account *ngFor="let account of (accounts$ | async)" [account]="account"></app-account>
+</ng-container>
+<ng-template #loadingTpl>fetching accounts...</ng-template>
 <p>
- Accounts:
+ All Accounts:
  <li *ngFor="let account of accounts">
-       Account Id: {{account.accountId}}, userName: {{account.userName}},
-        displayName: {{account.displayName}}
+       Account Id: {{account.userName}}
       <br>
 
   </li>

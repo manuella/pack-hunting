@@ -2,7 +2,12 @@ import { Injectable } from '@angular/core';
 import { Account } from '../models/account';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
+import { retry, catchError, tap } from 'rxjs/operators';
+
+import { AccountsStore } from './accounts.store';
+import { AccountsQuery } from './account.query';
+
+import { noop } from '@datorama/akita';
 
 
 const httpOptions = {
@@ -17,7 +22,9 @@ const httpOptions = {
 })
 export class AccountService {
 
-  constructor(private httpService : HttpClient)
+  constructor(private httpService : HttpClient,
+              private accountStore : AccountsStore,
+              private productQuery : AccountsQuery)
   {
 
   }
@@ -25,9 +32,13 @@ export class AccountService {
   AccountURL =  "http://localhost:8080/accounts/";
 
   accounts: Account[];
-  public getAccounts()
+  public get()
   {
-    return this.httpService.get<Account[]>(this.AccountURL);
+    const request = this.httpService.get<Account[]>(this.AccountURL).pipe(
+      tap(response => this.accountStore.set(response))
+    );
+
+    return this.productQuery.isPristine ? request : noop();
   }
 
   public createUser(userName: string) : Observable<Account>

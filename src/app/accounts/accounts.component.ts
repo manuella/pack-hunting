@@ -33,6 +33,7 @@ export class AccountsComponent implements OnInit
     console.log("Loading: " + this.loading$);
     console.log("accounts:" + this.accounts$);
 
+
     this.accounts$ = this.search.valueChanges.pipe(
       switchMap(value => this.accountsQuery.selectAll(
        {
@@ -40,13 +41,6 @@ export class AccountsComponent implements OnInit
       }
     ))
     );
-
-    this.accounts$.forEach(function (value2)
-     {
-        console.log("result: " + value2 )
-      });
-
-
     console.log(this.accounts$);
   }
 }

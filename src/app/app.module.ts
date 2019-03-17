@@ -12,6 +12,7 @@ import { RegisterAccountComponent } from './register-account/register-account.co
 import { SellToBrokerComponent } from './sell-to-broker/sell-to-broker.component';
 import { AcceptOfferComponent } from './accept-offer/accept-offer.component';
 import { AccountComponent } from './accounts/account.component';
+import { AccountDetailComponent } from './account-detail/account-detail.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AccountComponent } from './accounts/account.component';
     RegisterAccountComponent,
     SellToBrokerComponent,
     AcceptOfferComponent,
-    AccountComponent
+    AccountComponent,
+    AccountDetailComponent
   ],
   imports: [
     BrowserModule,

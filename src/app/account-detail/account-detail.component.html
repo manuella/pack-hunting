@@ -1,1 +1,14 @@
-{{ account.userName }}
+<!-- {{ account.userName }} -->
+<p>Transactions for account ID: {{id}}</p>
+<h2>Debits</h2>
+<ng-container *ngIf="!(loading$ | async); else loadingTpl">
+  <app-transaction-detail *ngFor="let transaction of
+                            (transactionsDebitor$ | async)"
+                            [transaction]="transaction"></app-transaction-detail>
+</ng-container>
+<br><h2>Credits</h2>
+<ng-container *ngIf="!(loading$ | async); else loadingTpl">
+  <app-transaction-detail *ngFor="let transaction of
+                          (transactionsCreditor$ | async)"
+                          [transaction]="transaction"></app-transaction-detail>
+</ng-container>

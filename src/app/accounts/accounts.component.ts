@@ -24,10 +24,7 @@ export class AccountsComponent implements OnInit
   {}
 
   ngOnInit() {
-
-    console.log("nginit accounts");
     this.accountsService.get().subscribe();
-
     this.loading$ = this.accountsQuery.selectLoading();
 
     console.log("Loading: " + this.loading$);
@@ -41,7 +38,6 @@ export class AccountsComponent implements OnInit
       }
     ))
     );
-    console.log(this.accounts$);
   }
 }
 

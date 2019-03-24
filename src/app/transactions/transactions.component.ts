@@ -14,7 +14,7 @@ export class TransactionsComponent implements OnInit {
   transactions : Transaction[];
 
   ngOnInit() {
-    this.transactionService.getTransactions().subscribe(
+    this.transactionService.get().subscribe(
   (data: Transaction[]) => this.transactions = data);
   }
 

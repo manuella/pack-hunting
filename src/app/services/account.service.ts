@@ -24,7 +24,7 @@ export class AccountService {
 
   constructor(private httpService : HttpClient,
               private accountStore : AccountsStore,
-              private productQuery : AccountsQuery)
+              private accountsQuery : AccountsQuery)
   {
 
   }
@@ -32,13 +32,14 @@ export class AccountService {
   AccountURL =  "http://www.mocky.io/v2/5c870f1932000022043bd039";
 
   accounts: Account[];
+  
   public get()
   {
     const request = this.httpService.get(this.AccountURL).pipe(
       tap(response => this.accountStore.set(response))
     );
 
-    return this.productQuery.isPristine ? request : noop();
+    return this.accountsQuery.isPristine ? request : noop();
   }
 
   public createUser(userName: string) : Observable<Account>

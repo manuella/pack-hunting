@@ -8,12 +8,12 @@ import { AcceptOfferComponent } from './accept-offer/accept-offer.component';
 import { AccountDetailComponent } from './account-detail/account-detail.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/transactions', pathMatch: 'full' },
-  { path: 'transactions', component: TransactionsComponent },
+  { path: '', redirectTo: '/accounts', pathMatch: 'full' },
+//  { path: 'transactions', component: TransactionsComponent },
   { path: 'accounts', component: AccountsComponent },
   { path: 'register-account', component: RegisterAccountComponent },
-  { path: 'sell-question', component: SellToBrokerComponent},
-  { path: 'accept-offer', component: AcceptOfferComponent},
+  //{ path: 'sell-question', component: SellToBrokerComponent},
+  //{ path: 'accept-offer', component: AcceptOfferComponent},
   { path: 'account-detail', component: AccountDetailComponent },
   { path: 'account-details/:id', component: AccountDetailComponent }
 ];

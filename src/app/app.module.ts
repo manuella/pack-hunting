@@ -9,8 +9,6 @@ import { TransactionsComponent } from './transactions/transactions.component';
 import { HttpErrorInterceptor } from './infrastructure/http-error.interceptor';
 import { AccountsComponent } from './accounts/accounts.component';
 import { RegisterAccountComponent } from './register-account/register-account.component';
-import { SellToBrokerComponent } from './sell-to-broker/sell-to-broker.component';
-import { AcceptOfferComponent } from './accept-offer/accept-offer.component';
 import { AccountComponent } from './accounts/account.component';
 import { AccountDetailComponent } from './account-detail/account-detail.component';
 import { TransactionDetailComponent } from './transaction-detail/transaction-detail.component';
@@ -23,8 +21,6 @@ import { TransactionDetailComponent } from './transaction-detail/transaction-det
     TransactionsComponent,
     AccountsComponent,
     RegisterAccountComponent,
-    SellToBrokerComponent,
-    AcceptOfferComponent,
     AccountComponent,
     AccountDetailComponent,
     TransactionDetailComponent

@@ -3,9 +3,9 @@ import { timer, pipe} from 'rxjs';
 import { mapTo, tap } from 'rxjs/operators';
 
 export class MockServerAuth {
-  login(name : string, key : number) {
+  login(creds) {
     // mock service
-    return timer(300).pipe(mapTo({ token: name, idKey: key }));
+    return timer(300).pipe(mapTo({ token: 'janeToken', idKey: '44' }));
   }
 }
 

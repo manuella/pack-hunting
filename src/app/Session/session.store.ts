@@ -13,22 +13,28 @@ export function createInitialSessionState(): SessionState
     //, ...storage.getSession(),
 }
 
+
+@Injectable({
+  providedIn: 'root'
+})
 @StoreConfig({ name: "session" })
 export class SessionStore extends Store<SessionState>
 {
   constructor() {
     super(createInitialSessionState());
+    console.log("Session store initiated");
   }
 
   login(session: SessionState)
   {
     this.update(session);
-    console.warn("logging in, " + session.idKey);
-    localStorage.setItem(session.token, session.idKey);
+    console.warn("logging in: " + session.idKey + " , " + session.token);
+    localStorage.setItem(session.idKey, session.token );
   }
 
   logout()
   {
+    console.log("logging out");
     localStorage.clear();
     this.update(createInitialSessionState());
   }

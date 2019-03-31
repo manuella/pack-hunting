@@ -4,3 +4,6 @@ Akita Accounts Demo<br>
   <app-account *ngFor="let account of (accounts$ | async)" [account]="account"></app-account>
 </ng-container>
 <ng-template #loadingTpl>fetching accounts...</ng-template>
+<p *showIfLoggedIn="true">
+  You are logged in! {{ name$ | async}}
+</p>

@@ -4,9 +4,11 @@ import { TransactionsComponent } from './transactions/transactions.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { RegisterAccountComponent } from './register-account/register-account.component';
 import { AccountDetailComponent } from './account-detail/account-detail.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/accounts', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
 //  { path: 'transactions', component: TransactionsComponent },
   { path: 'accounts', component: AccountsComponent },
   { path: 'register-account', component: RegisterAccountComponent },

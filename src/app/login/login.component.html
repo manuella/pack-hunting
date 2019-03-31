@@ -1,0 +1,10 @@
+Login
+<form [formGroup]="loginForm" (ngSubmit)="submit()">
+   <input type="email" formControlName="email"><br>
+   <input type="password" formControlName="password"><br>
+   <button type="submit">Submit</button>
+</form>
+
+<p *showIfLoggedIn="true">
+  You are logged in!
+</p>

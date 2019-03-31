@@ -12,6 +12,9 @@ import { RegisterAccountComponent } from './register-account/register-account.co
 import { AccountComponent } from './accounts/account.component';
 import { AccountDetailComponent } from './account-detail/account-detail.component';
 import { TransactionDetailComponent } from './transaction-detail/transaction-detail.component';
+import { LoginComponent } from './login/login.component';
+
+import { ShowIfLoggedInDirective } from './directives/login.directive';
 
 
 @NgModule({
@@ -23,7 +26,9 @@ import { TransactionDetailComponent } from './transaction-detail/transaction-det
     RegisterAccountComponent,
     AccountComponent,
     AccountDetailComponent,
-    TransactionDetailComponent
+    TransactionDetailComponent,
+    LoginComponent,
+    ShowIfLoggedInDirective
   ],
   imports: [
     BrowserModule,
